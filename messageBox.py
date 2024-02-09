@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import messagebox
 
 def click():
-    messagebox.showinfo(title='this is a info title box', message='you are a person')
+   # messagebox.showinfo(title='this is a info title box', message='you are a person')
 
 window = Tk()
 
