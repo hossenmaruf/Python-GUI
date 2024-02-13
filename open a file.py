@@ -1,12 +1,16 @@
 from tkinter import *
 from tkinter import filedialog
 
-def openfile():
-    filepath = filedialog.askopenfilename()
-    print(filepath)
-
+def openFile():
+    filepath = filedialog.askopenfilename(initialdir="D:\\python\\Python GUI",
+                                          title="Open file okay?",
+                                          filetypes= (("text files","*.txt"),
+                                          ("all files","*.*")))
+    file = open(filepath,'r')
+    print(file.read())
+    file.close()
 
 window = Tk()
-button = Button(text="open", command= openfile)
+button = Button(text="Open",command=openFile)
 button.pack()
 window.mainloop()
